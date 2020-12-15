@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../javafx-sdk-11.0.2/lib" />
+      <root url="jar://$PROJECT_DIR$/../../connect/mysql-connector-java-8.0.22/mysql-connector-java-8.0.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../всячина/загрузки/commons-logging-1.2/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../всячина/загрузки/commons-digester-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../всячина/загрузки/commons-beanutils-1.9.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../всячина/загрузки/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../всячина/загрузки/com.lowagie.text-2.1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../всячина/загрузки/jasperreports-6.16.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/../../../всячина/загрузки/commons-logging-1.2/apidocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../javafx-sdk-11.0.2/lib" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../javafx-sdk-11.0.2/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../javafx-sdk-11.0.2/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>

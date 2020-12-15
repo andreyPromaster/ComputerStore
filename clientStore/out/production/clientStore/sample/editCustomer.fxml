@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="542.0" prefWidth="1255.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditCustomerController">
+   <children>
+      <TableView fx:id="TableCustomer" layoutX="273.0" layoutY="43.0" prefHeight="446.0" prefWidth="973.0">
+        <columns>
+          <TableColumn fx:id="ColumnID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="ColumnAdr" prefWidth="126.0" text="Адрес" />
+            <TableColumn fx:id="ColumnFullName" minWidth="0.0" prefWidth="169.0" text="Полное имя" />
+            <TableColumn fx:id="ColumnPhone" prefWidth="87.0" text="Телефон" />
+            <TableColumn fx:id="ColumnAccount" prefWidth="114.0" text="Расчетный счет" />
+            <TableColumn fx:id="ColumnBIK" prefWidth="116.0" text="БИК" />
+            <TableColumn fx:id="ColumnKPP" prefWidth="138.0" text="КПП" />
+            <TableColumn fx:id="ColumnINN" prefWidth="147.0" text="ИНН" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="ListTypeCustomer" layoutX="33.0" layoutY="43.0" onAction="#FilterCustomerByType" prefHeight="25.0" prefWidth="195.0" promptText="Выберите тип контрагента">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Поставщик" />
+                  <String fx:value="Покупатель" />
+                  <String fx:value="Любая категория" />
+              </FXCollections>
+          </items>
+      </ComboBox>
+      <Button layoutX="193.0" layoutY="291.0" mnemonicParsing="false" onAction="#onBtnChangeCustomer" text="Изменить" />
+      <Button layoutX="194.0" layoutY="329.0" mnemonicParsing="false" onAction="#onBtnAddCustomer" text="Добавить" />
+      <Button layoutX="202.0" layoutY="200.0" mnemonicParsing="false" onAction="#onBtnFindByName" text="Поиск" />
+      <TextField fx:id="FieldFindByName" layoutX="19.0" layoutY="200.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="FieldFindByAccount" layoutX="19.0" layoutY="246.0" prefHeight="25.0" prefWidth="174.0" />
+      <Button layoutX="202.0" layoutY="246.0" mnemonicParsing="false" onAction="#onBtnFindByAccount" text="Поиск" />
+      <Label layoutX="74.0" layoutY="180.0" text="По имени">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="225.0" text="По расчетному счету">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="746.0" layoutY="26.0" text="Контрагенты">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="143.0" layoutY="371.0" mnemonicParsing="false" onAction="#onBtnUpdateCustomerTable" text="Обновить таблицу" />
+      <Button layoutX="33.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBtnComeBack" text="Назад" />
+   </children>
+</AnchorPane>

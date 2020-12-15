@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane layoutX="62.0" layoutY="46.0" prefHeight="303.0" prefWidth="483.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="124.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="336.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" text="Название" />
+            <Label alignment="CENTER" text="Артикул" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" text="Описание" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" text="Комментарий" GridPane.rowIndex="3" />
+            <Label alignment="CENTER" text="Категория техники" GridPane.rowIndex="4" />
+            <TextField fx:id="FieldName" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" right="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="FieldArticle" prefHeight="25.0" prefWidth="90.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" right="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextArea fx:id="FieldDescription" prefHeight="75.0" prefWidth="276.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="FieldComment" prefHeight="51.0" prefWidth="274.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+               </GridPane.margin>
+            </TextArea>
+            <ComboBox fx:id="TypeProduct" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Button fx:id="btnSave" layoutX="304.0" layoutY="349.0" mnemonicParsing="false" onAction="#onBtnSaveChange" prefHeight="25.0" prefWidth="150.0" text="Сохранить" />
+      <Label layoutX="304.0" layoutY="21.0" text="Панель техники">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="565.0" prefWidth="1039.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StatisticController">
+   <children>
+      <AreaChart fx:id="areaChartProceeds" layoutX="20.0" layoutY="50.0">
+        <xAxis>
+          <NumberAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <Button layoutX="90.0" layoutY="506.0" mnemonicParsing="false" onAction="#onBtnComeBack" text="Назад" />
+      <Label layoutX="142.0" layoutY="20.0" text="Суммарная выручка за каждый день месяца">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="573.0" layoutY="20.0" text="Соотношения между типами проданных товаров за все время">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="TimePeriod" layoutX="331.0" layoutY="450.0" onAction="#switchTimeTiCompere" prefWidth="150.0" promptText="Тип графика" />
+      <BarChart fx:id="BarChart" layoutX="513.0" layoutY="63.0" prefHeight="375.0" prefWidth="500.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Button layoutX="205.0" layoutY="506.0" mnemonicParsing="false" onAction="#onBtnGetProductReport" text="Получить список товаров в магазине" />
+      <Button layoutX="450.0" layoutY="506.0" mnemonicParsing="false" onAction="#onBtnGetMoneyReport" text="Получить отчет по выручке за этот месяц" />
+   </children>
+</AnchorPane>

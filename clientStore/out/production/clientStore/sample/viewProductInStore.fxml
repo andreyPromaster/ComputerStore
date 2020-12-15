@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="538.0" prefWidth="996.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewProductInStoreController">
+   <children>
+      <TableView fx:id="TableProductStore" layoutX="183.0" layoutY="63.0" prefHeight="421.0" prefWidth="799.0">
+        <columns>
+          <TableColumn fx:id="ColumnID" prefWidth="68.0" text="ID" />
+          <TableColumn fx:id="ColumnArticle" prefWidth="89.0" text="Артикул" />
+            <TableColumn fx:id="ColumnName" prefWidth="434.0" text="Название" />
+            <TableColumn fx:id="ColumnPrice" prefWidth="91.0" text="Цена" />
+            <TableColumn fx:id="ColumnAmount" prefWidth="115.0" text="Количество" />
+        </columns>
+      </TableView>
+      <Button layoutX="64.0" layoutY="198.0" mnemonicParsing="false" onAction="#FindByName" text="Найти" />
+      <Label layoutX="380.0" layoutY="22.0" text="Список товаров в магазине">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="FilterListByCategory" layoutX="14.0" layoutY="63.0" onAction="#FilterByCategory" prefWidth="150.0" promptText="Категория товара" />
+      <TextField fx:id="FieldFindByName" layoutX="15.0" layoutY="165.0" />
+      <Label layoutX="43.0" layoutY="148.0" text="Поиск по названию" />
+      <TextField fx:id="FieldStartPrice" layoutX="15.0" layoutY="257.0" />
+      <TextField fx:id="FieldEndPrice" layoutX="15.0" layoutY="299.0" />
+      <Button layoutX="63.0" layoutY="333.0" mnemonicParsing="false" onAction="#FindByPrice" text="Найти" />
+      <Label layoutX="47.0" layoutY="240.0" text="Стартовая цена" />
+      <Button layoutX="17.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBtnComeBack" text="Назад" />
+      <Label layoutX="48.0" layoutY="282.0" text="Конечная цена" />
+   </children>
+</AnchorPane>

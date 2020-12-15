@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegistrationController">
+   <children>
+      <ComboBox fx:id="IdStatus" layoutX="226.0" layoutY="246.0" prefHeight="25.0" prefWidth="149.0" promptText="Выбрать">
+       <items>
+       <FXCollections fx:factory="observableArrayList">
+           <String fx:value="Админ" />
+           <String fx:value="Кассир" />
+       </FXCollections>
+        </items>
+       </ComboBox>
+       <PasswordField fx:id="idFieldPassword" layoutX="226.0" layoutY="147.0" />
+      <PasswordField fx:id="IdFieldPasswordRepeat" layoutX="226.0" layoutY="188.0" />
+      <TextField fx:id="IdFieldLogin" layoutX="226.0" layoutY="108.0" />
+      <Button fx:id="IdBtnRegistration" layoutX="237.0" layoutY="295.0" mnemonicParsing="false" onAction="#onBtnRegister" text="Зарегистрироваться" />
+      <Label layoutX="140.0" layoutY="112.0" text="Логин" />
+      <Label layoutX="140.0" layoutY="151.0" text="Пароль" />
+      <Label layoutX="113.0" layoutY="192.0" text="Поторите пароль" />
+      <Label layoutX="242.0" layoutY="229.0" text="Выберите должность" />
+      <Label layoutX="243.0" layoutY="37.0" text="Регистрация">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
